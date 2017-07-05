@@ -1,14 +1,14 @@
 # Caret-Plugin-Pretty-SQL
-This Caret plugin formats SQL for pretty print
+This Caret plugin formats SQL and DAX for pretty print
 
-Eventuall I'll add a link to the extension on the chrome webstore, when its added.
+Here's the  [link](https://chrome.google.com/webstore/detail/caret-pluginsql-formatter/dkjokfldmgepembohkgndcmjoggncdgn?utm_source=chrome-app-launcher-search) to the extension on the chrome webstore.
 
 The options for [sql-formatter](https://github.com/zeroturnaround/sql-formatter) are passed via "options"
 
 ## To use with Caret
 
 You'll need to add the following to your api.json file, under settings menu.  This plugin
-can pass the same options that JS-Beautify does in the 'options' tag.  **Note:** The id is the id found under extensions. The one in here is for the plugin on the webstore.
+can pass the same options that sql-formatter does in the 'options' tag.  **Note:** The id is the id found under extensions. The one in here is for the plugin on the webstore.
 
 ### api.json
 
@@ -29,6 +29,16 @@ can pass the same options that JS-Beautify does in the 'options' tag.  **Note:**
 			}
 		},
 		"sendEditorContext": true
+	},
+	"format-DAX": {
+		"id": "fnkfgnggimkijjldpalcfjfomhipodib",
+		"message": {
+			"command": "dax-format",
+			"options": {
+				"indent": "\t"
+			}
+		},
+		"sendEditorContext": true
 	}
 }
 ```
@@ -42,6 +52,10 @@ This is optional, but allows the command to be accessable in menu system.
 	"label": "Format SQL",
 	"command": "api:execute",
 	"argument": "format-SQL"
+}, {
+	"label": "Format DAX",
+	"command": "api:execute",
+	"argument": "format-DAX"
 }
 ```
 
@@ -52,3 +66,4 @@ Without the following, this plug-in would not exist.  Thanks to their works.
 
 - [Caret](https://github.com/thomaswilburn/Caret)
 - [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
+- Microsoft for SSAS and DAX
