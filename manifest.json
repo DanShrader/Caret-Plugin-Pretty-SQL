@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Caret Plugin::SQL and DAX Formatter",
 	"description": "SQL and DAX Formatter in Caret Editor.",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"background": {
 		"scripts": ["background.js", "sql-formatter.js"]
 	}
